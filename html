@@ -1,0 +1,26 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Parking Lot Detection</title>
+</head>
+<body>
+    <div class="container">
+        <div class="info">
+            <h1>Parking Lot Information</h1>
+            <div id="lot-info">
+                <p>Lot 1: <span id="lot1-free-spaces">Loading...</span> / <span id="lot1-total-spaces">Loading...</span> total spaces</p>
+                <p>Lot 2: <span id="lot2-free-spaces">Loading...</span> / <span id="lot2-total-spaces">Loading...</span> total spaces</p>
+            </div>
+        </div>
+        <div class="map">
+            <h1>Map</h1>
+            <iframe id="map" width="600" height="450"
+                src="https://maps.google.com/maps?output=embed" frameborder="0"></iframe>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
